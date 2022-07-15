@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  kibana:
+    hostname: kibana
+    image: kibana:6.5.2
+    container_name: kibana
+    environment:
+      - "LOGGING_QUIET=true"
+      - "ELASTICSEARCH_URL=http://172.16.11.200:31335"
+    ports:
+      - 5601:5601
